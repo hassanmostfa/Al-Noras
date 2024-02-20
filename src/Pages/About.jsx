@@ -6,7 +6,7 @@ import Mission from './Mission';
 import Props from './Props';
 import Values from './Values';
 import Footer from '../Components/Footer';
-
+import PartnersSwiper from './PartnersSwiper';
 const About = () => {
     return (
         <div>
@@ -14,6 +14,7 @@ const About = () => {
             <AboutHeader/>
             <Vision/>
             <Mission/>
+            <PartnersSwiper/>
             <Props/>
             <Values/>
             <Footer/>

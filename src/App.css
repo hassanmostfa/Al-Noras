@@ -68,20 +68,19 @@ a{
 /* End feedback section*/
 
 /* Start feedback section*/
-.logos_container{
+.logos_container , .partners-swiper{
   background: #00000061;
   padding: 20px;
   border-radius: 10px;
   border: 1px solid white;
 }
 
-.logos_container div{
+.logos_container div , .partners-logos div{
   position: relative;
   background-color: white !important;
   border-radius: 10px !important;
   width: 200px !important;
 }
-
 /* End feedback section*/
 
 /* Start Services section*/
@@ -287,10 +286,21 @@ text-align-last: center;
 /* End Home section*/
 
 /* Start Footer section*/
+.payment-methods{
+  margin-right: 0 !important;
+  
+}
 .payment-methods div{
   width: max-content;
   
 }
+@media screen and (max-width:970px) {
+  .payment-methods img{
+    margin-bottom: 20px;;
+    
+  }
+}
+
 
 /*collapse*/
 .issue-img{
@@ -554,6 +564,182 @@ text-align-last: center;
   }
 }
 /*End Achivements*/
+
+/*Start Courses*/
+.courses-nav-container{
+  margin-top: 20px;
+  background-color: var(--black-color) !important;
+}
+.courses-nav{
+  justify-content: space-between;
+}
+.courses-nav a{
+  margin-right: 0px !important;
+}
+.styledLink{
+  color: white;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 15px;
+}
+.navbar1{
+  margin-right: 0px !important;
+}
+.navbar1 a{
+  color: white !important;
+  font-size: 18px;
+  text-decoration: none;
+}
+.navbar1 a:hover{
+  color: var(--main-color) !important;
+}
+.navbar1 span{
+  color: white;
+  font-size: 22px;
+}
+
+@media screen and (max-width:500px) {
+  .navbar1 .links{
+    margin-bottom: 15px;
+  }
+  .navbar1 a{
+    text-align: center;
+  }
+  .navbar2 .links{
+    flex-direction: column;
+    
+  }
+  .navbar2 img {
+    display: none;
+
+  }
+  .navbar1 span{
+    font-size: 30px !important;
+  } 
+  .styledLink{
+    padding: 4px !important;
+  }
+
+}
+.courses-search-input{
+  background-color: var(--black-color) !important;
+  color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-right: 20px;
+  width: 300px !important;
+  outline: none;
+  text-align: right;
+}
+.courses-search-input::placeholder{
+  color: white;
+}
+.search-icon{
+  color: black;
+  position: absolute;
+  right: 474px;
+  bottom: 465px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width:999px) {
+  .search-icon , .search-courses-icon {
+    display: none;
+  }
+}
+.courses-header{
+  background-color: var(--black-color) !important;
+  height: 200px;
+  padding-top: 40px;
+}
+.courses-header h1{
+  color: var(--main-color) !important;
+  font-size: 40px;
+  font-weight: bold;
+}
+.search-courses{
+  text-align: right;
+  text-align: right;
+  padding: 5px;
+  width: 500px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+@media screen and (max-width:550px) {
+  .search-courses{
+    width: 330px;
+  }
+}
+.search-courses-icon{
+  color: white;
+  position: absolute;
+  left: 331px;
+  bottom: -1px;
+  background-color: var(--main-color);
+  padding: 10px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.search-courses-icon::placeholder{
+  color: black;
+  text-align: right;
+}
+
+.search-box{
+  position: relative;
+}
+
+.courses-cards{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.card{
+  background-color: transparent !important;
+  border: 1px solid white !important;
+}
+.card-title{
+  color: var(--main-color) !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
+}
+.card-btn{
+  background-color: var(--main-color) !important;
+  color: white !important;
+  border: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+/*Start Filter*/
+.courses-filter{
+  direction: rtl;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.courses-filter-btn{
+  width: 20% !important;
+  padding: 7px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media screen and (max-width:500px) {
+  .courses-filter {
+    flex-direction: column !important;
+  }
+  .courses-filter-btn {
+    width: 100% !important;
+  }
+}
+/*End Filter*/
+/*End Courses*/
 
 /*Start Footer*/
 .copy-right{

@@ -1,13 +1,20 @@
 import React from 'react'
-// import payment from "../images/طرق-الدفع.png" ;
+import Payment1 from "../images/Payment1.png" ;
+import Payment2 from "../images/Payment2.png" ;
+import Payment3 from "../images/Payment3.png" ;
+import Payment4 from "../images/Payment4.png" ;
+import Payment5 from "../images/Payment5.png" ;
+
 function Footer() {
     return (
         <div className='footer text-center mt-3'>
-            {/*
-                <div className='payment-methods  justify-content-center mt-8 bg-white'>
-                    <div><img src={payment} alt="" width={500}/></div>
+                <div className='payment-methods row py-3 justify-content-center mt-8 bg-white'>
+                    <div><img src={Payment1} alt="" width={150}/></div>
+                    <div><img src={Payment2} alt="" width={100}/></div>
+                    <div><img src={Payment3} alt="" width={100}/></div>
+                    <div><img src={Payment4} alt="" width={100}/></div>
+                    <div><img src={Payment5} alt="" width={150}/></div>
                 </div>
-            */}
             <div className='polices text-center py-3' >
                 <div className='col-sm-12'>
                 <div style={{width:"100%"}} className='row justify-content-center text-white py-3' >

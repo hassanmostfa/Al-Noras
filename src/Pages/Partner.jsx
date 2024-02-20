@@ -1,8 +1,4 @@
-import React from 'react'
-import Partner1 from '../images/partner1.png' ;
-import Partner2 from '../images/partner2.png' ;
-import Partner3 from '../images/partner3.png' ;
-import Partner4 from '../images/partner4.png' ;
+import React from 'react' ;
 import Partner5 from '../images/partner5.png' ;
 import Partner6 from '../images/partner6.png' ;
 import Partner7 from '../images/partner7.png' ;
@@ -11,6 +7,7 @@ import ContactUs from './ContactUs'
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
+import { Link } from 'react-router-dom';
 
 
 const Partner = () => {
@@ -121,18 +118,14 @@ const Partner = () => {
         <br/>
             <h2 className='title my-3'>شركائنا</h2>
             <div className='logos_container row justify-content-center m-5 gap-3'>
-                <div className='col-md-3 text-center'><img className='mt-4' src={Partner1} alt='' width={100}/></div>
-                <div className='col-md-3 text-center'><img className='mt-4' src={Partner2} alt='' width={100}/></div>
-                <div className='col-md-3 text-center'><img src={Partner3} alt='' width={100}/></div>
-                <div className='col-md-3 text-center'><img src={Partner4} alt='' width={100}/></div>
-                <div className='col-md-3 text-center'><img src={Partner5} alt='' width={100}/></div>
-                <div className='col-md-3 text-center'><img src={Partner6} alt='' width={100}/></div>
-                <div className='col-md-3 text-center'><img src={Partner7} alt='' width={100}/></div>
-                <div className='col-md-3 text-center'><img src={Partner8} alt='' width={100}/></div>
+                <div className='col-md-3 text-center'><Link to=""><img src={Partner5} width={100} alt="" className="mx-4" /></Link></div>
+                <div className='col-md-3 text-center'><Link to=""><img src={Partner6} width={100} alt="" className="mx-4" /></Link></div>
+                <div className='col-md-3 text-center'><Link to=""><img src={Partner7} width={100} alt="" className="mx-4" /></Link></div>
+                <div className='col-md-3 text-center'><Link to=""><img src={Partner8} width={100} alt="" className="mx-4" /></Link></div>
             </div>
             <ContactUs className="my-5"/> 
         </div>
     )
 }
 
-export default Partner
+export default Partner ;

@@ -17,7 +17,7 @@ const MyNavbar = () => {
                 <img src={left} alt="" width={50} />
                 <NavLink to="/" className="mainLink">الرئيسية</NavLink>
                 <NavLink to="/about">عن اكاديمية النورس</NavLink>
-                <NavLink to="link">برامجنا</NavLink>
+                <NavLink to="/courses">برامجنا</NavLink>
                 <NavLink to="link">خدماتنا</NavLink>
                 <NavLink to="link">شهادات احترافية</NavLink>
                 <NavLink to="link">استشارة مجانية</NavLink>
