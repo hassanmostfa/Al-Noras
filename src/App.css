@@ -5,7 +5,7 @@
 }
 :root {
   --main-color:#f9b233 ;
-  --black-color:#0000002d ;
+  --black-color:#0000004d ;
 }
 html {
   scroll-behavior: smooth;
@@ -314,6 +314,13 @@ text-align-last: center;
   font-size: 20px !important;
   border-radius: 12px !important;
 }
+
+.course_details_collapse p{
+    text-align: right;
+    margin-right: 20px;
+    font-size: 18px;
+    color: white;
+}
 /* End Footer section*/
 
 /*Start Navbar*/
@@ -577,11 +584,19 @@ text-align-last: center;
   margin-right: 0px !important;
 }
 .styledLink{
-  color: white;
+  color: white !important;
   background-color: var(--main-color);
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 15px;
   margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+.styledLink:hover{
+  background-color: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  transition: 0.3s;
 }
 .navbar1{
   margin-right: 0px !important;
@@ -714,6 +729,10 @@ text-align-last: center;
   outline: 0 !important;
   box-shadow: none !important;
 }
+.card a{
+  color: white;
+  text-decoration: none;
+}
 
 /*Start Filter*/
 .courses-filter{
@@ -741,6 +760,78 @@ text-align-last: center;
 /*End Filter*/
 /*End Courses*/
 
+/*Start Course Details*/
+.course-details{
+  background-color: var(--black-color);
+  color: white;
+  direction: rtl;
+}
+.course-details a{
+  color: white !important;
+  text-decoration: none;
+  font-size: 18px;
+}
+.course-details h2{
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--main-color);
+  border-bottom: 3px solid white;
+  padding-bottom: 8px;
+}
+.course-details h3{
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.course-details .styledLink{
+  width: fit-content !important;
+}
+.course-details img{
+  width: 100px !important;
+}
+
+.course-properties{
+  position: relative;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 140px 20px 20px;
+}
+.course-properties h3{
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px !important;
+}
+.course-properties li{
+  font-size: 18px;
+  color: white;
+  margin-right: 10px;
+}
+.circle{
+  display: block !important;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #6363bf;
+  margin-right: 10px;
+}
+.course-properties button
+{
+  display: block;
+  margin: auto;
+  background-color: white;
+  color: var(--main-color);
+  border: none;
+  border-radius: 15px;
+  padding: 8px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 55px;
+}
+/*End Course Details*/
 /*Start Footer*/
 .copy-right{
   background-color: rgb(35, 35, 46) !important;
