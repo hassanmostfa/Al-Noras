@@ -7,10 +7,14 @@ import Categories from "../Components/Categories";
 import img from "../images/HM logo .png";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
+import lecturerImg from "../images/Picture1.png";
 const CourseDetails = () => {
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);
+    const [open3, setOpen3] = useState(false);
+    const [open4, setOpen4] = useState(false);
+    const [open5, setOpen5] = useState(false);
 
     const { id } = useParams();
     const selectedItem = Categories.find((item) => item.id === parseInt(id));
@@ -40,12 +44,12 @@ const CourseDetails = () => {
             <h2>{selectedItem.title}</h2>
             <p>{selectedItem.describtion}</p>
             <h3 className="my-3">الاعتمادات والتوثيق</h3>
-            <div className="row justify-content-start gap-2 ">
+            <div className="row gap-2 documemtations">
                 <img src={img} alt="" width={100} />
                 <img src={img} alt="" width={100} />
                 <img src={img} alt="" width={100} />
             </div>
-            <div className="d-flex gap-3 mt-5">
+            <div className="d-flex gap-3 mt-5 btn_group">
                 <NavLink to={"#"} className="styledLink">
                 الاسئلة الشائعة
                 </NavLink>
@@ -86,8 +90,9 @@ const CourseDetails = () => {
             </div>
             </div>
         </div>
-        {/* Collapse 1 */}
+        {/*Start course details collapse*/}
         <div className="mx-3 course_details_collapse">
+            {/* Collapse 1 */}
             <Button
             onClick={() => setOpen(!open)}
             aria-controls="example-collapse-text"
@@ -184,7 +189,6 @@ const CourseDetails = () => {
             <div id="example-collapse-text">
                 <div>
                 <p className="my-3 p-2">
-                    
                     هي المجموعة الرئيسة التي تهدف لتطوير وتنمية المستوى العليا في
                     المجال العلمي والتعليمي
                 </p>
@@ -200,7 +204,143 @@ const CourseDetails = () => {
             </div>
             </Collapse>
         </div>
-        <Footer />
+        {/*End course details collapse*/}
+
+        {/*Start course lectures*/}
+        <div className="course_lectures my-5">
+            <h2 className="lectures_title">المحاضرات</h2>
+            {/* Collapse 1 */}
+            <div className="mx-3">
+            <Button
+                onClick={() => setOpen3(!open3)}
+                aria-controls="example-collapse-text"
+                aria-expanded={open3}
+                className="issue-btn"
+            >
+                <div className="d-flex justify-content-between position-relative p-2">
+                <div style={{ color: "orange" }}>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div
+                    style={{
+                    color: "orange",
+                    fontWeight: "bold",
+                    fontSize: "22px",
+                    }}
+                >
+                    {" "}
+                    المحاضرة الاولي
+                </div>
+                </div>
+            </Button>
+            <Collapse in={open3}>
+                <div id="example-collapse-text">
+                <div>
+                    <p className="my-3 p-2">
+                    هي المجموعة الرئيسة التي تهدف لتطوير وتنمية المستوى العليا في
+                    المجال العلمي والتعليمي
+                    </p>
+                </div>
+                </div>
+            </Collapse>
+            {/* Collapse 2 */}
+            <Button
+                onClick={() => setOpen4(!open4)}
+                aria-controls="example-collapse-text"
+                aria-expanded={open4}
+                className="issue-btn"
+            >
+                <div className="d-flex justify-content-between position-relative p-2">
+                <div style={{ color: "orange" }}>
+                    <i className="fa-solid fa-chevron-down"></i>
+                </div>
+                <div
+                    style={{
+                    color: "orange",
+                    fontWeight: "bold",
+                    fontSize: "22px",
+                    }}
+                >
+                    {" "}
+                    المحاضرة الثانية
+                </div>
+                </div>
+            </Button>
+            <Collapse in={open4}>
+                <div id="example-collapse-text">
+                <div>
+                    <p className="my-3 p-2">
+                    هي المجموعة الرئيسة التي تهدف لتطوير وتنمية المستوى العليا في
+                    المجال العلمي والتعليمي
+                    </p>
+                </div>
+                </div>
+            </Collapse>
+            {/* Collapse 3 */}
+            <Button
+                onClick={() => setOpen5(!open5)}
+                aria-controls="example-collapse-text"
+                aria-expanded={open5}
+                className="issue-btn"
+            >
+                <div className="d-flex justify-content-between position-relative p-2">
+                <div style={{ color: "orange" }}>
+                    <i className="fa-solid fa-chevron-down"></i>
+                </div>
+                <div
+                    style={{
+                    color: "orange",
+                    fontWeight: "bold",
+                    fontSize: "22px",
+                    }}
+                >
+                    {" "}
+                    الامتحان النهائي
+                </div>
+                </div>
+            </Button>
+            <Collapse in={open5}>
+                <div id="example-collapse-text">
+                <div>
+                    <p className="my-3 p-2">
+                    هي المجموعة الرئيسة التي تهدف لتطوير وتنمية المستوى العليا في
+                    المجال العلمي والتعليمي
+                    </p>
+                </div>
+                </div>
+            </Collapse>
+            </div>
+            {/*End course lectures*/}
+            {/* Start Lecturer Section */}
+            <div className="lecturer_section my-5" >
+                <h2 className="lecturer_title">المدربين</h2>
+                <div className="row m-4">
+                    <div className="col-sm-3 lecturer_info container">
+                        <h3 className="lecturer_name">Hassan Mostafa</h3>
+                        <div className="lecturer_img my-3">
+                            <img src={lecturerImg} alt="" width={100} />
+                        </div>
+                        <NavLink to={"/"}><i className="fa-brands fa-linkedin mb-3"></i></NavLink>
+                    </div>
+                    <div className="col-sm-9 lecturer_qualifications">
+                        <div className="d-flex gap-2">
+                            <i className="fa-solid fa-user"></i>
+                            <p> خبرة أكثر من 20 سنة فى مجال المحاسبة المالية استشارى ومدير مالي للعديد من الشركات التجارية والصناعية خبرة فى مجال التدريب وتأهيل المحاسبة</p>
+                        </div>
+                        <div className="d-flex gap-2">
+                            <i className="fa-solid fa-star"></i>
+                            <p><span>0.00</span> تقييم المحاضر</p>
+                        </div>
+                        <div className="d-flex gap-2">
+                            <i className="fa-solid fa-play"></i>
+                            <p> خبرة أكثر من 20 سنة فى مجال المحاسبة المالية استشارى ومدير مالي للعديد من الشركات التجارية والصناعية خبرة فى مجال التدريب وتأهيل المحاسبة</p>
+                        </div>
+                    </div>
+                </div>
+                {/* End Lecturer Section */}
+                </div>
+                <Footer />
+            </div>
         </div>
     );
 };

@@ -5,7 +5,7 @@ const Navbar2 = () => {
     return (
         <div>
         <div className="navbar1 courses-nav-container col row justify-content-around py-3 px-5 mt-4">
-            <div className="links col-sm-6 d-flex justify-content-start gap-3">
+            <div className="links col-sm-6 d-flex justify-content-start gap-3 aboveStyledLinks">
                 <Link className="styledLink">انضم كمحاضر</Link>
                 <Link className="styledLink">الخطة التدريبية</Link>
             </div>

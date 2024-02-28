@@ -617,6 +617,7 @@ text-align-last: center;
 @media screen and (max-width:500px) {
   .navbar1 .links{
     margin-bottom: 15px;
+    justify-content: center !important;
   }
   .navbar1 a{
     text-align: center;
@@ -634,8 +635,12 @@ text-align-last: center;
   } 
   .styledLink{
     padding: 4px !important;
+    text-align: center !important;
+    display: block;
   }
-
+  .aboveStyledLinks{
+    flex-direction: column !important;
+  }
 }
 .courses-search-input{
   background-color: var(--black-color) !important;
@@ -647,6 +652,12 @@ text-align-last: center;
   width: 300px !important;
   outline: none;
   text-align: right;
+}
+@media screen and (max-width:500px) {
+  .courses-search-input{
+    display: block;
+    margin: auto;
+  }
 }
 .courses-search-input::placeholder{
   color: white;
@@ -761,10 +772,24 @@ text-align-last: center;
 /*End Courses*/
 
 /*Start Course Details*/
+@media screen and (max-width:500px) {
+  .btn_group{
+    flex-direction: column !important;
+  }
+  .btn_group a{
+    width: 100% !important;
+    margin: 10px 0 !important;
+  }
+}
 .course-details{
   background-color: var(--black-color);
   color: white;
   direction: rtl;
+}
+@media screen and (max-width:500px) {
+  .course-details {
+    text-align: center;
+  }
 }
 .course-details a{
   color: white !important;
@@ -787,8 +812,20 @@ text-align-last: center;
 .course-details .styledLink{
   width: fit-content !important;
 }
+@media screen and (max-width:500px) {
+  .course-details .styledLink{
+    display: block;
+    margin: auto;
+    width: 100% !important;
+  }
+}
 .course-details img{
   width: 100px !important;
+}
+@media screen and (max-width:500px)  {
+  .documemtations{
+    justify-content: center !important;
+  }
 }
 
 .course-properties{
@@ -798,6 +835,11 @@ text-align-last: center;
   padding: 20px;
   border-radius: 10px;
   margin: 20px 140px 20px 20px;
+}
+@media screen and (max-width:500px) {
+  .course-properties{
+    margin: 30px 0px;
+  }
 }
 .course-properties h3{
   font-size: 25px;
@@ -810,13 +852,18 @@ text-align-last: center;
   color: white;
   margin-right: 10px;
 }
+@media screen and (max-width : 500px) {
+  .course-properties li {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+}
 .circle{
   display: block !important;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: #6363bf;
-  margin-right: 10px;
 }
 .course-properties button
 {
@@ -832,6 +879,65 @@ text-align-last: center;
   margin-top: 55px;
 }
 /*End Course Details*/
+
+/*Start Lectures Section*/
+.course_lectures{
+
+}
+.lectures_title , .lecturer_title{
+  text-align: right;
+  margin-right: 30px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.lecturer_section{
+  direction: rtl;
+  background-color: var(--black-color);
+}
+.lecturer_info {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  border-left: 2px solid var(--main-color);
+  margin-bottom: 20px;
+}
+@media screen and (max-width:572px) {
+  .lecturer_info {
+    border-left: none;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 10px
+  }
+  
+}
+.lecturer_info a{
+    font-size: 30px;
+    background: white;
+    padding: 0px 8px 0px;
+    height: 40px;
+    width: 41px;
+    display: block;
+    margin:15px auto;
+    border-radius: 10px;
+}
+.lecturer_img {
+  border: 2px solid var(--main-color);
+  border-radius: 70px;
+}
+
+.lecturer_qualifications{
+  margin-top: 25px;
+}
+.lecturer_qualifications i{
+  color: var(--main-color);
+  margin-top: 7px;
+}
+.lecturer_qualifications p{
+  font-size: 18px;
+  color: white;
+}
+/*End Lectures Section*/
 /*Start Footer*/
 .copy-right{
   background-color: rgb(35, 35, 46) !important;
