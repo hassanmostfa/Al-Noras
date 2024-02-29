@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams, NavLink , Link } from "react-router-dom";
 import Footer from "../Components/Footer";
 import Navbar2 from "../Components/Navbar2";
 import Navbar3 from "../Components/Navbar3";
@@ -8,6 +8,7 @@ import img from "../images/HM logo .png";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import lecturerImg from "../images/Picture1.png";
+import Rating from "./Rating";
 const CourseDetails = () => {
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
@@ -337,10 +338,23 @@ const CourseDetails = () => {
                         </div>
                     </div>
                 </div>
-                {/* End Lecturer Section */}
-                </div>
-                <Footer />
             </div>
+                {/* End Lecturer Section */}
+                {/* Start Rate Section */}
+                <Rating/>
+                {/* End Rate Section */}
+                {/* Start Form Section */}
+                <p className="notice my-2">من فضلك <Link>سجل دخولك</Link> اولا ثم اضف سؤالك</p>
+                <h3 className="my-3 form_title">هل لديك سؤال؟</h3>
+                <form className="form_data mx-5">
+                    <textarea placeholder="اضف سؤالك" className="my-2" /> <br/>
+                    <input type="file" className="my-3"/><br/>
+                    <button className="btn btn-primary">اضافة سؤالك</button>
+                </form>
+                <p className="notice my-2">من فضلك <Link>سجل دخولك</Link> اولا ثم اضف سؤالك</p>
+                {/* End Form Section */}
+                </div>
+            <Footer />
         </div>
     );
 };

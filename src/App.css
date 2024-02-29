@@ -881,9 +881,9 @@ text-align-last: center;
 /*End Course Details*/
 
 /*Start Lectures Section*/
-.course_lectures{
-
-}
+/* .course_lectures{
+  margin-bottom: 0px !important;
+} */
 .lectures_title , .lecturer_title{
   text-align: right;
   margin-right: 30px;
@@ -938,6 +938,49 @@ text-align-last: center;
   color: white;
 }
 /*End Lectures Section*/
+/*Start Rate Section*/
+  .rating{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .rating_item h3{
+    color: var(--main-color);
+  }
+  .rating_item h1{
+    color: white;
+  }
+  .rating_item i{
+    color: var(--main-color);
+  }
+  .progress_container .percentage{
+    color: white;
+  }
+/*End Rate Section*/
+/*Start Form Section*/
+.notice{
+  font-size: 20px;
+  color: white;
+  text-align: right;
+  margin-right: 50px;
+}
+.notice a {
+  color: white;
+  text-decoration-color: var(--main-color);
+}
+.notice a:hover {
+  color: var(--main-color);
+}
+.form_title {
+  text-align: right;
+  font-size: 30px;
+  margin-right: 50px;
+  color: white;
+}
+.form_data{
+  direction: rtl;
+}
+/*End Form Section*/
 /*Start Footer*/
 .copy-right{
   background-color: rgb(35, 35, 46) !important;
